@@ -1,5 +1,4 @@
 function my_function {
-sudo apt-get install sshpass jq -y
   local server_ip="$1"
   local ds_server_ip="$2"
   local username="$3"
@@ -12,7 +11,7 @@ sudo apt-get install sshpass jq -y
 
   sshpass -p "$password" ssh -o StrictHostKeyChecking=no "$username@$server_ip" "$ssh_command"
 }
-
+sudo apt-get install sshpass jq -y
 my_function "MainServerIpHere1" "destinationServerIpHere1" "USERNAME" "PASSWORD"
 my_function "MainServerIpHere2" "destinationServerIpHere2" "USERNAME" "PASSWORD"
 my_function "MainServerIpHere3" "destinationServerIpHere3" "USERNAME" "PASSWORD"
