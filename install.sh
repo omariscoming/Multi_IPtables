@@ -1,4 +1,5 @@
 function my_function {
+sudo apt-get install sshpass jq -y
   local server_ip="$1"
   local ds_server_ip="$2"
   local username="$3"
